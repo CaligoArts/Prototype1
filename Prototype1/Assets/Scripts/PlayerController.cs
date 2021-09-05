@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 10.0f;      // Variable to allow setting vehicle speed in Inspector.
+    private float speed = 15.0f;      // Variable to allow setting vehicle speed in Inspector.
     private float turnSpeed = 50.0f;     // Inspector adjustable variable to turn vehicle.
     private float horizontalInput;   // Uses Edit> Project Settings> Input Manager> Axes to input for left, right movement.
     private float forwardInput;      // Allows assignment of forward, backward Player input.
     // Changed all variables above from public to private because once set there is no need to access them in Inspector & we don't want anything else changing them.
+
+    // 3rd Person view to 1st person view:
+    public Camera mainCamera;
+    public Camera fpvCamera;
+    public KeyCode switchKey;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +40,12 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");  // Assigns horizontalInput variable to Player input on horizontal axis. (This was put at Top of Update() but didn't say why, works fine here.)
         forwardInput = Input.GetAxis("Vertical");   // Assigns forwardInput variable to Player input on vertical axis.
+
+        // 3rd Person view to 1st person view:
+        if(Input.GetKeyDown(switchKey))
+        {
+            mainCamera.enabled = !mainCamera.enabled;
+            fpvCamera.enabled = !fpvCamera.enabled;
+        }
     }
 }
