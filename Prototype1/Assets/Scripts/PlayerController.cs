@@ -15,17 +15,9 @@ public class PlayerController : MonoBehaviour
     public Camera fpvCamera;
     public KeyCode switchKey;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
-
         // transform.Translate(0, 0, 1);    // Move the vehicle forward.
         // Translate    Moves the transform in the direction & distance of translatation (x, y, z)
         // transform.Translate(Vector3.forward);   // Cleaner way to write the above code.
