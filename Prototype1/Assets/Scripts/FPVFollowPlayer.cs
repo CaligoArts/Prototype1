@@ -13,7 +13,7 @@ public class FPVFollowPlayer : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;    //Starting position of camera.
-        horizontalInput = Input.GetAxis("Horizontal");  //Uses the Horizontal axis set in Unity to control left, right movement.
+        //horizontalInput = Input.GetAxis("Horizontal");  //Uses the Horizontal axis set in Unity to control left, right movement. (Don't need this since it's controlled in PlayerController.cs if its a child of Player GameObject.)
         transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);    //Rotates camera based on left, right player input times turnSpeed times once a second.
     }
 }
