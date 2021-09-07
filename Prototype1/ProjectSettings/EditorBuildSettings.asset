@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: a027cc42f32534b46bc80bccd6eace99
+  - enabled: 1
+    path: Assets/Scenes/Prototype 1.1BonusChallenges.unity
+    guid: 0d29eb8f98300c64aa9fd5d341b955b5
+  - enabled: 1
+    path: Assets/Scenes/2PlayerPrototype 1.1BonusChallenges 1.unity
+    guid: 6f5b8be9deddc894c80952b4ea34eb0f
   m_configObjects: {}
